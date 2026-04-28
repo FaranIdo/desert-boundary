@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific
+data/
+outputs/
+*.tif
+*.tiff
+*.npz
+*.html
+.DS_Store
+.claude/

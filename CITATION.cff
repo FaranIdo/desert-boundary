@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "desert-boundary: Desert-Vegetation Boundary Detection via Projection of Self-Supervised Satellite Embeddings"
+authors:
+  - family-names: Faran
+    given-names: Ido
+    affiliation: "Bar-Ilan University"
+  - family-names: Netanyahu
+    given-names: Nathan S.
+    affiliation: "Bar-Ilan University; College of Law and Business"
+  - family-names: Shoshany
+    given-names: Maxim
+    affiliation: "Technion Israel Institute of Technology"
+repository-code: "https://github.com/FaranIdo/desert-boundary"
+license: Apache-2.0
+preferred-citation:
+  type: conference-paper
+  title: "Desert-Vegetation Boundary Detection via Projection of Self-Supervised Satellite Embeddings"
+  authors:
+    - family-names: Faran
+      given-names: Ido
+    - family-names: Netanyahu
+      given-names: Nathan S.
+    - family-names: Shoshany
+      given-names: Maxim
+  conference:
+    name: "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)"
+  year: 2026
