@@ -17,6 +17,8 @@ Pipeline:
 3. **Adaptive thresholding** — Otsu's method binarises the score map.
 4. **Morphological regularisation + boundary extraction** — disk closing/opening, largest connected component, marching squares.
 
+![Pipeline overview: (1) self-supervised satellite embeddings, (2) weakly supervised linear projection of embeddings onto NDVI, (3) adaptive (Otsu) thresholding, (4) morphological regularisation and boundary extraction.](figures/pipeline.png)
+
 ## Installation
 
 ```bash
