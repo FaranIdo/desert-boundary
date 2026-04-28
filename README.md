@@ -91,19 +91,6 @@ Outputs land in `outputs/`.
 
 Reference layers used in Fig. 2/3 are bundled in `data/beer_sheva/edge/` (phytogeographic boundary) and `data/beer_sheva/edge250/` (250 mm isohyet). Both were hand-digitized by the authors in Google Earth and are released under this repository's Apache-2.0 license.
 
-## Hyperparameters
-
-Defaults match the paper:
-
-| Parameter | Value |
-|---|---|
-| Embedding pooling 10 m → 30 m | 3×3 mean |
-| Ridge regularisation $\lambda$ | 1.0 |
-| Training subsample | 10% of pixels |
-| Threshold | Otsu (automatic) |
-| Morphology iterations | 5 |
-| Disk radius | 15 px (≈ 450 m) |
-
 ## Citation
 
 ```bibtex
@@ -116,10 +103,6 @@ Defaults match the paper:
 ```
 
 A `CITATION.cff` is provided for tools that consume it.
-
-## Contact
-
-Questions or issues? Please open an issue on this repository, or contact Ido Faran at <idoosbron@gmail.com>.
 
 ## License
 
