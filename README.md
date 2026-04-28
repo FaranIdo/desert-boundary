@@ -3,6 +3,8 @@
 Code for the IGARSS 2026 paper.
 
 > Ido Faran, Nathan S. Netanyahu, Maxim Shoshany. *Desert-Vegetation Boundary Detection via Projection of Self-Supervised Satellite Embeddings.* IEEE International Geoscience and Remote Sensing Symposium (IGARSS), 2026.
+>
+> Corresponding author: Ido Faran &mdash; <idoosbron@gmail.com>.
 
 ![Boundary comparison on the Beer Sheva region: Landsat true colour, K-means on NDVI, GMM on NDVI, and our method.](figures/teaser.png)
 
