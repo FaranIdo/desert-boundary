@@ -106,7 +106,7 @@ Outputs land in `outputs/`.
 | AlphaEarth (Satellite Embedding V1) | `GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL` |
 | Landsat 8 Collection 2 Level-2 | `LANDSAT/LC08/C02/T1_L2` |
 
-Reference layers (phytogeographic boundary, 250 mm isohyet) used in Fig. 2/3 are not redistributed here. Provide your own shapefiles at the paths the scripts expect (see `paper_boundary_figure.py` and `boundary_with_reference.py`).
+Reference layers used in Fig. 2/3 are bundled in `data/beer_sheva/edge/` (phytogeographic boundary) and `data/beer_sheva/edge250/` (250 mm isohyet). Both were hand-digitized by the authors in Google Earth and are released under this repository's Apache-2.0 license.
 
 ## Hyperparameters
 
