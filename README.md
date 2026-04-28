@@ -61,7 +61,9 @@ python analysis/boundary_detector.py \
     --region    beer_sheva
 ```
 
-The script writes `data/<region>/boundary/boundary_embedding.npz` (smoothed mask, contour, projection weights, fit stats) and an HTML viewer in `outputs/`. The paper figure scripts read the npz from this location automatically. Repeat with `--region algeria` for the Algerian site.
+The script writes `data/<region>/boundary/boundary_embedding.npz` (smoothed mask, contour, projection weights, fit stats) and an HTML viewer in `outputs/`. The paper figure scripts read the npz from this location automatically.
+
+Repeat with `--region algeria` (and the matching `--embeddings` / `--landsat` paths) for the Algerian site.
 
 ### 3. Reproduce paper figures and metrics
 
