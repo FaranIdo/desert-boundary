@@ -788,7 +788,8 @@ def detect_desert_vegetation_boundary(
     save_geojson: bool = True,
     save_visualization: bool = True,
     open_browser: bool = True,
-    reference_shapefiles: list = None
+    reference_shapefiles: list = None,
+    region: str = None
 ) -> dict:
     """
     Full pipeline for detecting the MAIN desert-vegetation boundary.
@@ -887,7 +888,12 @@ def detect_desert_vegetation_boundary(
     print("-" * 50)
 
     # Save NPZ file (for unified viewer integration)
-    boundary_dir = os.path.join(PROJECT_DIR, 'data', 'boundary')
+    # If region is set, place under data/<region>/boundary/ so paper figure
+    # scripts (paper_boundary_figure.py, paper_single_figure.py, ...) can find it.
+    if region:
+        boundary_dir = os.path.join(PROJECT_DIR, 'data', region, 'boundary')
+    else:
+        boundary_dir = os.path.join(PROJECT_DIR, 'data', 'boundary')
     os.makedirs(boundary_dir, exist_ok=True)
 
     # Create boundary RGB visualization (green=vegetation, brown=desert, red=boundary)
@@ -1043,6 +1049,12 @@ Examples:
         help='Reference shapefiles in format: path:name:color (e.g., edge/phyto-line.shp:Phytogeographic:#0000FF)'
     )
 
+    parser.add_argument(
+        '--region',
+        default=None,
+        help='If set, save the boundary npz under data/<region>/boundary/ where paper figure scripts read it from (e.g., beer_sheva, algeria).'
+    )
+
     args = parser.parse_args()
 
     # Parse reference shapefiles
@@ -1074,7 +1086,8 @@ Examples:
         save_geojson=not args.no_geojson,
         save_visualization=True,
         open_browser=not args.no_browser,
-        reference_shapefiles=reference_shapefiles
+        reference_shapefiles=reference_shapefiles,
+        region=args.region
     )
 
     return results

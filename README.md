@@ -57,17 +57,11 @@ For arbitrary AOIs, supply a KML polygon to `kml_region_downloader.py`.
 ```bash
 python analysis/boundary_detector.py \
     --embeddings data/beer_sheva/google_embedding_2022.tif \
-    --landsat   data/beer_sheva/LC08_20221001_SAVI.tif
+    --landsat   data/beer_sheva/LC08_20221001_SAVI.tif \
+    --region    beer_sheva
 ```
 
-The script writes `data/boundary/boundary_embedding.npz` (smoothed mask, contour, projection weights, fit stats) and an HTML viewer in `outputs/`. The paper figure scripts expect this file under `data/<region>/boundary/`, so move it there:
-
-```bash
-mkdir -p data/beer_sheva/boundary && \
-    mv data/boundary/boundary_embedding.npz data/beer_sheva/boundary/
-```
-
-Repeat for Algeria.
+The script writes `data/<region>/boundary/boundary_embedding.npz` (smoothed mask, contour, projection weights, fit stats) and an HTML viewer in `outputs/`. The paper figure scripts read the npz from this location automatically. Repeat with `--region algeria` for the Algerian site.
 
 ### 3. Reproduce paper figures and metrics
 
